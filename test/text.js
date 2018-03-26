@@ -29,6 +29,14 @@ describe('Text', function() {
     text.CODE("Ϩ").should.equal(1000);
   });
 
+  it('CONCAT', function() {
+    text.CONCAT('hello', ' ', 'world').should.equal('hello world');
+    text.CONCAT(['hello', ' my ', 'world']).should.equal('hello my world');
+    text.CONCAT(1, 'one').should.equal('1one');
+    text.CONCAT(true, 'yes').should.equal('TRUEyes');
+    text.CONCAT(false, 'no').should.equal('FALSEno');
+  });
+
   it('CONCATENATE', function() {
     text.CONCATENATE('hello', ' ', 'world').should.equal('hello world');
     text.CONCATENATE(['hello', ' my ', 'world']).should.equal('hello my world');
@@ -203,6 +211,9 @@ describe('Text', function() {
     text.TEXT('1234.59', '####.#').should.equal('1234.6');
     text.TEXT('1234.52', '####.#').should.equal('1234.5');
     text.TEXT('1234.56', '####.##').should.equal('1234.56');
+
+    const d = new Date('2018-02-14 22:03Z');
+    text.TEXT(d, 'DD-MMM-YYYY').should.equal('14-Feb-2018');
     text.TEXT().should.equal(error.na);
   });
 
