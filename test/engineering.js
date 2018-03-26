@@ -3,27 +3,6 @@ var error = require('../lib/error');
 var engineering = require('../lib/engineering');
 
 describe('Engineering', function() {
-  it('BESSELI', function() {
-    engineering.BESSELI(1.5, 1).should.approximately(0.981666, 10e-6);
-    engineering.BESSELI(1.5, 2).should.approximately(0.337835, 10e-6);
-    engineering.BESSELI('invalid').should.equal(error.value);
-  });
-
-  it('BESSELJ', function() {
-    engineering.BESSELJ(1.9, 2).should.approximately(0.329926, 10e-6);
-    engineering.BESSELJ('invalid').should.equal(error.value);
-  });
-
-  it('BESSELK', function() {
-    engineering.BESSELK(1.5, 1).should.approximately(0.277388, 10e-6);
-    engineering.BESSELK('invalid').should.equal(error.value);
-  });
-
-  it('BESSELY', function() {
-    engineering.BESSELY(2.5, 1).should.approximately(0.145918, 10e-6);
-    engineering.BESSELY('invalid').should.equal(error.value);
-  });
-
   it('BIN2DEC', function() {
     engineering.BIN2DEC(1100100).should.equal(100);
     engineering.BIN2DEC(1111111111).should.equal(-1);

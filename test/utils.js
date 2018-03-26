@@ -96,4 +96,12 @@ describe('Utils', function() {
     utils.transpose([[1,2,3,4],[5,6,7,8], [9,10,11,12]])
       .should.deepEqual([[1,5,9],[2,6,10], [3,7,11], [4,8,12]]);
   });
+
+  it('anyIsNull', function() {
+    should.equal(utils.anyIsNull(), false);
+    should.equal(utils.anyIsNull(0, 'one'), false);
+    should.equal(utils.anyIsNull(null), true);
+    should.equal(utils.anyIsNull(null, 42), true);
+    should.equal(utils.anyIsNull(42, null, 'one'), true);
+  });
 });
