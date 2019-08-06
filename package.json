@@ -1,11 +1,11 @@
 {
-  "author": "Handsoncode <hello@handsontable.com>",
-  "name": "@handsontable/formulajs",
+  "author": "Riffyn <hello@riffyn.com>",
+  "name": "@riffyn/formulajs",
   "description": "JavaScript implementation of most Microsoft Excel formula functions",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "repository": {
     "type": "git",
-    "url": "git@github.com:handsontable/formula.js.git"
+    "url": "git+https://github.com/RiffynInc/formula.js.git"
   },
   "main": "index.js",
   "bin": {
@@ -31,10 +31,10 @@
     "browserify": "^13.0.1",
     "cli-table": "^0.3.0",
     "generate-release": "^0.10.2",
-    "http-server": "^0.9.0",
+    "http-server": "^0.11.1",
     "istanbul": "^0.4.5",
-    "jshint": "^2.5.2",
-    "mocha": "^2.5.0",
+    "jshint": "^2.10.2",
+    "mocha": "^2.5.3",
     "mocha-lcov-reporter": "0.0.1",
     "mocha-spec-cov": "0.0.3",
     "should": "^11.1.0",
@@ -46,5 +46,5 @@
       "data-cover-never": "node_modules"
     }
   },
-  "license": "MIT"
+  "license": "ISC"
 }
