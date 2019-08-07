@@ -21,7 +21,6 @@
     "release": "generate-release"
   },
   "dependencies": {
-    "bessel": "^0.2.0",
     "jStat": "^1.7.0",
     "moment": "^2.21.0",
     "numbro": "^1.11.0"
