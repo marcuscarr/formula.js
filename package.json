@@ -2,7 +2,7 @@
   "author": "Riffyn <hello@riffyn.com>",
   "name": "@riffyn/formulajs",
   "description": "JavaScript implementation of most Microsoft Excel formula functions",
-  "version": "1.2.4",
+  "version": "1.2.4-patch2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RiffynInc/formula.js.git"
@@ -21,10 +21,11 @@
     "release": "generate-release"
   },
   "dependencies": {
-    "bessel": "^0.2.0",
     "jStat": "^1.7.0",
     "moment": "^2.21.0",
-    "numbro": "^1.11.0"
+    "numbro": "^1.11.0",
+    "@handsontable/jstat": "^1.0.0",
+    "bessel": "^0.2.0"
   },
   "devDependencies": {
     "blanket": "^1.1.6",
