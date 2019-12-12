@@ -10,7 +10,7 @@ build:
 	@$(webpack) --config .config/production.js
 
 test:
-	@$(mocha) -u tdd -R mocha-spec-cov -r blanket
+	@$(mocha) -u bdd --exit
 
 test-browser:
 	@mkdir -p tmp
@@ -18,22 +18,22 @@ test-browser:
 	@$(http-server) -p 8088 -s -o
 
 test-watch:
-	@$(mocha) -u tdd -R min -w
+	@$(mocha) -u bdd -R min -w
 
 lint:
 	@$(jshint) lib/*.js
 
 coverage:
 	@mkdir -p coverage
-	@$(mocha) -r blanket -u tdd -R mocha-lcov-reporter > coverage/lcov.info
-	@$(mocha) -u tdd -R html-cov -r blanket > coverage/coverage-report.html
+	@$(mocha) -r blanket -u bdd -R mocha-lcov-reporter > coverage/lcov.info
+	@$(mocha) -u bdd -R html-cov -r blanket > coverage/coverage-report.html
 
 package: clean build
 	rm -rf *.tgz || true
 	@npm pack
 
 watch:
-	@$(mocha) -u tdd -R mocha-spec-cov -r blanket -w
+	@$(mocha) -u bdd -R mocha-spec-cov -r blanket -w
 
 clean:
 	@rm -rf build/
