@@ -2,7 +2,7 @@
   "author": "Riffyn <hello@riffyn.com>",
   "name": "@riffyn/formulajs",
   "description": "JavaScript implementation of most Microsoft Excel formula functions",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RiffynInc/formula.js.git"
